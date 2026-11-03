@@ -1,11 +1,6 @@
-# 仅发布网页总册成品；Markdown源稿与记录只在本地保留。
+# 仅发布网页总册成品与404路由网关；各章源网页与配图仅留本地。
 *.md
-# 各章源网页与配图仅留本地；线上只发布合并后的index.html。
-amino-acids.html
-vitamins-coenzymes.html
-carbohydrates.html
 assets-45/
-
-lipids-membranes.html
-nucleic-acids.html
-dna-replication.html
+*.html
+!index.html
+!404.html

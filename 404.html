@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>正在跳转至清华841复习总册...</title>
+  <script>
+    (function(){
+      var path = location.pathname;
+      var file = path.split('/').pop();
+      var hash = location.hash ? location.hash.slice(1) : '';
+      var map = {
+        'amino-acids.html': '2', 'amino-acids': '2',
+        'enzyme.html': '3',
+        'vitamins-coenzymes.html': '4', 'vitamins-coenzymes': '4',
+        'carbohydrates.html': '5', 'carbohydrates': '5',
+        'lipids-membranes.html': '6', 'lipids-membranes': '6',
+        'nucleic-acids.html': '7', 'nucleic-acids': '7',
+        'dna-replication.html': '8', 'dna-replication': '8',
+        'rna-synthesis.html': '9', 'rna-synthesis': '9',
+        'protein-synthesis.html': '10', 'protein-synthesis': '10',
+        'metabolism-overview.html': '11', 'metabolism-overview': '11',
+        'glucose-metabolism.html': '12', 'glucose-metabolism': '12',
+        'tca-cycle.html': '13', 'tca-cycle': '13',
+        'oxidative-phosphorylation.html': '14', 'oxidative-phosphorylation': '14',
+        'photosynthesis.html': '15', 'photosynthesis': '15',
+        'lipid-metabolism.html': '16', 'lipid-metabolism': '16',
+        'amino-acid-metabolism.html': '17', 'amino-acid-metabolism': '17',
+        'nucleotide-metabolism.html': '18', 'nucleotide-metabolism': '18',
+        'biochemistry-techniques.html': '19', 'biochemistry-techniques': '19'
+      };
+      var ch = map[file];
+      var base = location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+      if (ch) {
+        var target = base + '#chapter-' + ch + (hash ? '/' + encodeURIComponent(hash) : '');
+        location.replace(target);
+      } else {
+        location.replace(base);
+      }
+    })();
+  </script>
+</head>
+<body style="background:#0f172a;color:#94a3b8;font-family:-apple-system,sans-serif;text-align:center;padding:60px 20px;">
+  <h2 style="color:#f8fafc;">清华841《生物医学基础综合》复习总册</h2>
+  <p>正在为您跳转至目标章节……</p>
+  <p><a href="./" style="color:#38bdf8;text-decoration:none;">点击此处直接返回总册首页</a></p>
+</body>
+</html>
